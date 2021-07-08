@@ -122,10 +122,10 @@ export default {
         managerKey: "",
         facebookTitle: "",
         facebookDescription: "",
-        facebookImage: "",
+        facebookImage: [],
         twitterTitle: "",
         twitterDescription: "",
-        twitterImage: "",
+        twitterImage: [],
       },
     };
   },
