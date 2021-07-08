@@ -75,7 +75,6 @@
               <hk-image-uploader
                 v-model="mainTab.imageBanner"
                 name="banner"
-                :files="[]"
               />
             </div>
           </hk-form-group>
@@ -85,7 +84,6 @@
               <hk-image-uploader
                 v-model="mainTab.imageBannerBottom"
                 name="banner-bottom"
-                :files="[]"
               />
             </div>
           </hk-form-group>
@@ -95,7 +93,6 @@
               <hk-image-uploader
                 v-model="mainTab.imageBannerTop"
                 name="banner-top"
-                :files="[]"
               />
             </div>
           </hk-form-group>
