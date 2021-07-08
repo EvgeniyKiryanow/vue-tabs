@@ -72,7 +72,6 @@
             <hk-image-uploader
               v-model="seoTab.facebookImage"
               name="facebookImage"
-              :files="[]"
             />
           </div>
         </hk-form-group>
@@ -101,7 +100,6 @@
           <div>
             <hk-image-uploader
               v-model="seoTab.twitterImage"
-              :filter="[]"
               name="twitterImage"
             />
           </div>
