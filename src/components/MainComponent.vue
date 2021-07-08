@@ -197,19 +197,6 @@ export default {
 </script>
 
 <style lang="scss">
-.last-input {
-  width: 33%;
-  .form-group {
-    display: block;
-    margin: 5%;
-    .pos-r {
-      display: flex;
-      .pos-r {
-        width: 90%;
-      }
-    }
-  }
-}
 .flex {
   display: flex;
   margin: 3% 0;
@@ -233,6 +220,19 @@ export default {
       //indentation and add to center wrapper
       width: 94%;
       margin: 0 auto;
+      .last-input {
+        width: 33%;
+        .form-group {
+          display: block;
+          margin: 5%;
+          .pos-r {
+            display: flex;
+            .pos-r {
+              width: 90%;
+            }
+          }
+        }
+      }
       .form-group {
         display: flex;
         justify-content: space-around;
