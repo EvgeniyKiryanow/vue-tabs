@@ -9,7 +9,7 @@
         <hk-form-group class="first-item">
           <div>
             <hk-label>Short Tickets Shop description for Google</hk-label>
-            <hk-textarea :maxlength="295" />
+            <hk-textarea :maxlength="295" v-model="seoTab.descriptionGoogle" />
           </div>
         </hk-form-group>
 
@@ -51,11 +51,11 @@
         <hk-form-group class="flex-between">
           <div class="width">
             <hk-label>General preview title(including facebook)</hk-label>
-            <hk-textarea :maxlength="60" />
+            <hk-textarea :maxlength="60" v-model="seoTab.facebookTitle" />
           </div>
           <div class="width">
             <hk-label>General preview description(including facebook)</hk-label>
-            <hk-textarea :maxlength="295" />
+            <hk-textarea :maxlength="295" v-model="seoTab.facebookDescription" />
           </div>
         </hk-form-group>
         <hk-form-group class="flex-between">
@@ -72,11 +72,11 @@
         <hk-form-group class="flex-between">
           <div class="width">
             <hk-label>Twitter preview title</hk-label>
-            <hk-textarea :maxlength="60" />
+            <hk-textarea :maxlength="60" v-model="seoTab.twitterTitle" />
           </div>
           <div class="width">
             <hk-label>Twitter preview description</hk-label>
-            <hk-textarea :maxlength="295" />
+            <hk-textarea :maxlength="50" v-model="seoTab.twitterDescription" />
           </div>
         </hk-form-group>
         <hk-form-group class="flex-between">
