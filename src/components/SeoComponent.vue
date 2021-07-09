@@ -9,13 +9,7 @@
         <hk-form-group class="first-item">
           <div>
             <hk-label>Short Tickets Shop description for Google</hk-label>
-            <textarea
-              v-model="seoTab.descriptionGoogle"
-              name="descriptionGoogle"
-              cols="30"
-              rows="3"
-              maxlength="295"
-            />
+            <hk-textarea :maxlength="295" />
           </div>
         </hk-form-group>
 
@@ -57,23 +51,11 @@
         <hk-form-group class="flex-between">
           <div class="width">
             <hk-label>General preview title(including facebook)</hk-label>
-            <textarea
-              max-lenght="60"
-              v-model="seoTab.facebookTitle"
-              name="facebookTitle"
-              cols="20"
-              rows="1"
-            />
+            <hk-textarea :maxlength="60" />
           </div>
           <div class="width">
             <hk-label>General preview description(including facebook)</hk-label>
-            <textarea
-              max-lenght="295"
-              v-model="seoTab.facebookDescription"
-              name="facebookDescription"
-              cols="20"
-              rows="1"
-            />
+            <hk-textarea :maxlength="295" />
           </div>
         </hk-form-group>
         <hk-form-group class="flex-between">
@@ -90,23 +72,11 @@
         <hk-form-group class="flex-between">
           <div class="width">
             <hk-label>Twitter preview title</hk-label>
-            <textarea
-              max-lenght="60"
-              v-model="seoTab.twitterTitle"
-              name="twitterTitle"
-              cols="20"
-              rows="1"
-            />
+            <hk-textarea :maxlength="60" />
           </div>
           <div class="width">
             <hk-label>Twitter preview description</hk-label>
-            <textarea
-              max-lenght="295"
-              v-model="seoTab.twitterDescription"
-              name="twitterDescription"
-              cols="20"
-              rows="1"
-            />
+            <hk-textarea :maxlength="295" />
           </div>
         </hk-form-group>
         <hk-form-group class="flex-between">
