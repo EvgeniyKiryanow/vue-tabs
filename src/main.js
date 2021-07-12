@@ -3,7 +3,7 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import './utils/grid-template-mixins.scss'
+import './utils/flex-mixins.scss'
 
 Vue.config.productionTip = false;
 // import Vue from "vue/dist/vue.esm";

@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import "src/utils/flex-mixins";
 .nav {
   display: flex;
   .nav__link {
@@ -88,6 +88,49 @@ export default {
         margin-bottom: 15px;
       }
       & .tab__wrapper {
+        .first-group{
+          width: 100%;
+        }
+        .second-group{
+          @include d-flex;
+          justify-content: space-between;
+          & > div {
+            width: 48%;
+          }
+        }
+        .third-group{
+          display: flex;
+          width: 48%;
+          align-items: center;
+          justify-content: center;
+        }
+        .fourth-group{
+          @include d-flex;
+          justify-content: space-between;
+          & > div {
+            width: 48%;
+          }
+        }
+        .fifth-group{
+          display: flex;
+          width: 48%;
+          align-items: center;
+          justify-content: center;
+
+        }
+        .six-group{
+          @include d-flex;
+          justify-content: space-between;
+          & > div {
+            width: 48%;
+          }
+        }
+        .seven-group{
+          display: flex;
+          width: 48%;
+          align-items: center;
+          justify-content: center;
+        }
 
       }
     }
@@ -103,51 +146,37 @@ export default {
           width: 100%;
         }
         .second-group{
-          display: flex;
-          width: 100%;
+          @include d-flex;
           justify-content: space-between;
-          align-items: center;
           & > div {
             width: 33%;
           }
         }
         .third-group{
-          display: flex;
-          width: 100%;
+          @include d-flex;
           justify-content: space-between;
-          align-items: center;
           & > div {
             width: 33%;
           }
         }
         .fourth-group{
-          width: 100%;
-          display: flex;
-          align-items: center;
+          @include d-flex;
         }
         .fifth-group{
-          display: flex;
-          width: 100%;
+          @include d-flex;
           justify-content: space-between;
-          align-items: center;
           & > div {
             width: 33%;
           }
         }
         .six-group{
-          display: flex;
-          align-items: center;
-          width: 100%;
+          @include d-flex;
         }
         .seven-group{
-          width: 100%;
-          display: flex;
-          align-items: center;
+          @include d-flex;
         }
         .eight-group{
-          width: 100%;
-          display: flex;
-          align-items: center;
+          @include d-flex;
         }
       }
     }
