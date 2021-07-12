@@ -1,0 +1,224 @@
+/*
+Mixins for easy location tab component you must do easy 4 actions.
+****** First actions *******
+Import mixin in scss when you want to use.
+
+<style lang="scss">
+@import "@/utils/mixin";
+</style>
+
+****** Second actions *******
+Write how many columns and rows you have.
+Usage: @include grid-template(columns,rows).
+For example @include grid-template(2 ,2)
+Seems like:
+(
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+)
+
+*/
+
+@mixin grid-template($columns , $rows) {
+  display: grid;
+  grid-template-rows: repeat($rows, 1fr);
+  grid-template-columns: repeat($columns, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*
+****** Third actions *******
+Include class -grid-area
+Usage: add how mush rows(groups) you have and we add to class grid-area.
+For example:  @include two-groups.
+Seems like:
+(
+  .first-group{
+   grid-area: first-group;
+  }
+  .second-group{
+   grid-area: second-group;
+  }
+)
+
+You can add new mixin with new value-groups and use in project.
+And you must give class .first-group,.second-group... to every wrapper element
+*/
+
+@mixin one-group{
+ .first-group{
+  grid-area: firstGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+}
+@mixin two-groups{
+ .first-group{
+  grid-area: firstGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .second-group{
+  grid-area: secondGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+}
+@mixin three-groups{
+ .first-group{
+  grid-area: firstGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .second-group{
+  grid-area: secondGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .third-group{
+  grid-area: thirdGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+}
+@mixin four-groups{
+ .first-group{
+  grid-area: firstGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .second-group{
+  grid-area: secondGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .third-group{
+  grid-area: thirdGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .fourth-group{
+  grid-area: fourthGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+}
+@mixin five-groups{
+ .first-group{
+  grid-area: firstGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .second-group{
+  grid-area: secondGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .third-group{
+  grid-area: thirdGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .fourth-group{
+  grid-area: fourthGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .fifth-group{
+  grid-area: fifthGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+}
+@mixin seven-groups{
+ .first-group{
+  grid-area: firstGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .second-group{
+  grid-area: secondGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .third-group{
+  grid-area: thirdGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .fourth-group{
+  grid-area: fourthGroup;display: flex;
+  justify-content: space-around;
+ }
+ .fifth-group{
+  grid-area: fifthGroup;display: flex;
+  justify-content: space-around;
+ }
+ .six-group{
+  grid-area: sixGroup;display: flex;
+  justify-content: space-around;
+ }
+ .seven-group{
+  grid-area: sevenGroup;display: flex;
+  justify-content: space-around;
+ }
+}
+@mixin eight-groups{
+ .first-group{
+  grid-area: firstGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .second-group{
+  grid-area: secondGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .third-group{
+  grid-area: thirdGroup;
+  display: flex;
+  justify-content: space-around;
+ }
+ .fourth-group{
+  grid-area: fourthGroup;display: flex;
+  justify-content: space-around;
+ }
+ .fifth-group{
+  grid-area: fifthGroup;display: flex;
+  justify-content: space-around;
+ }
+ .six-group{
+  grid-area: sixGroup;display: flex;
+  justify-content: space-around;
+ }
+ .seven-group{
+  grid-area: sevenGroup;display: flex;
+  justify-content: space-around;
+ }
+ .eight-group{
+  grid-area: eigthGroup;display: flex;
+  justify-content: space-around;
+ }
+}
+
+
+/*
+****** Fourth actions *******
+Write structure to wrapper component (grid-template-areas) and write settings.
+For example:
+(
+grid-template-areas:
+   "first-group ."
+   "second-group second-group"
+   "third-group ."
+   "fourth-group fourth-group"
+   "fifth-group ."
+   "six-group six-group"
+   "seven-group ."
+  ;
+)
+*/

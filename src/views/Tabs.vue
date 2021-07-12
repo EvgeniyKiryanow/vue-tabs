@@ -19,16 +19,16 @@
         </button>
       </div>
 
-      <div class="tab__content" id="myTabContent">
+      <div class="tabs" id="myTabContent">
         <div
-          class="tab__pane tab__pane-fade"
+          class="tab tab-fade"
           :class="{ 'active show': isActive('main') }"
           id="main"
         >
           <MainComponent />
         </div>
         <div
-          class="tab__pane tab__pane-fade"
+          class="tab tab-fade"
           :class="{ 'active show': isActive('seo') }"
           id="seo"
         >
@@ -64,23 +64,68 @@ export default {
 </script>
 
 <style lang="scss">
-button{
-  &:hover{
-    background: #42b983;
-  }
-}
-.nav{
+@import "../utils/grid-template-mixins";
+.nav {
   display: flex;
-  &__link{
-    padding: 20px;
+  .nav__link {
+    padding: 15px;
   }
 }
-.tab__pane-fade {
-  display: none;
-  &.active {
-    display: block;
+.tabs {
+  .tab-fade {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .tab {
+    border: 1px solid black;
+    &__seo {
+      & .tab__header {
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid black;
+        margin-bottom: 15px;
+      }
+      & .tab__wrapper {
+        //Documentation to usage @include in @/src/utils/grid-template-mixins.scss
+        @include grid-template(2, 7);
+        @include seven-groups;
+        grid-template-areas:
+          "firstGroup  ."
+          "secondGroup secondGroup"
+          "thirdGroup  ."
+          "fourthGroup fourthGroup"
+          "fifthGroup  ."
+          "sixGroup    sixGroup"
+          "sevenGroup  .";
+      }
+    }
+    &__main {
+      & .tab__header {
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid black;
+        margin-bottom: 15px;
+      }
+      & .tab__wrapper {
+        //Documentation to usage @include in @/src/utils/grid-template-mixins.scss
+        @include grid-template(3, 8);
+        @include eight-groups;
+        grid-template-areas:
+          "firstGroup . . "
+          "secondGroup secondGroup secondGroup "
+          "thirdGroup thirdGroup thirdGroup "
+          "fourthGroup . . "
+          "fifthGroup fifthGroup fifthGroup "
+          "sixGroup . . "
+          "sevenGroup . . "
+          "eigthGroup . . ";
+      }
+    }
   }
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -89,44 +134,3 @@ button{
   color: #2c3e50;
 }
 </style>
-
-<!--.nav {
-  display: flex;
-  .nav__link {
-    padding: 15px;
-  }
-}
-
-.tab__content {
-  .tab__pane-fade {
-    display: none;
-    &.active {
-      display: block;
-    }
-  }
-  .tab__wrapper {
-    border: 1px solid black;
-    .section__header {
-      width: 96%;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .section__main {
-      border-top: 1px solid black;
-      .section__main__wrapper {
-        .section__main__banner {
-          width: 100%;
-        }
-        .form-group {
-          display: inline-block;
-          width: 33%;
-        }
-        .section__main__footer {
-          .form-group {
-            display: block;
-          }
-        }
-      }
-    }
-  }
-}-->
