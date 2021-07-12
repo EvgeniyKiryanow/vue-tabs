@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../utils/grid-template-mixins";
+
 .nav {
   display: flex;
   .nav__link {
@@ -88,17 +88,7 @@ export default {
         margin-bottom: 15px;
       }
       & .tab__wrapper {
-        //Documentation to usage @include in @/src/utils/grid-template-mixins.scss
-        @include grid-template(2, 7);
-        @include seven-groups;
-        grid-template-areas:
-          "firstGroup  ."
-          "secondGroup secondGroup"
-          "thirdGroup  ."
-          "fourthGroup fourthGroup"
-          "fifthGroup  ."
-          "sixGroup    sixGroup"
-          "sevenGroup  .";
+
       }
     }
     &__main {
@@ -109,18 +99,56 @@ export default {
         margin-bottom: 15px;
       }
       & .tab__wrapper {
-        //Documentation to usage @include in @/src/utils/grid-template-mixins.scss
-        @include grid-template(3, 8);
-        @include eight-groups;
-        grid-template-areas:
-          "firstGroup . . "
-          "secondGroup secondGroup secondGroup "
-          "thirdGroup thirdGroup thirdGroup "
-          "fourthGroup . . "
-          "fifthGroup fifthGroup fifthGroup "
-          "sixGroup . . "
-          "sevenGroup . . "
-          "eigthGroup . . ";
+        .first-group{
+          width: 100%;
+        }
+        .second-group{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          & > div {
+            width: 33%;
+          }
+        }
+        .third-group{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          & > div {
+            width: 33%;
+          }
+        }
+        .fourth-group{
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .fifth-group{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          & > div {
+            width: 33%;
+          }
+        }
+        .six-group{
+          display: flex;
+          align-items: center;
+          width: 100%;
+        }
+        .seven-group{
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .eight-group{
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
       }
     }
   }
